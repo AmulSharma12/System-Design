@@ -40,3 +40,52 @@
 - Now as as engineer, you can take business requirements, and convert them into the technical solution.
 - Engineer used system design patterns to make reliable , scalable and maintainable systems.
 - Don't worry if you dont know how to figure out the design pattern this is just a example of how the problems being solved and i also dont know before that but now its clear how to actually think/how they solve problems atleast using the example.
+
+## 🚀 Live streaming system-design
+
+- Let's say a company doing the broadcasting of vides to billions of people. e.g. hotstar, netflix, youtube etc.
+- some sort of events broadcasting to millions of people you as a enginner have to come up with some solution that will solve this problem.
+
+- <i> Step 1 </i>
+
+  - Define the requirements from the user perspective.
+  - Normally, this thing done by product manager not by engineer to write the Product requirement document based on:-
+    - user-feedback and data.
+  - Then, Engineer will come up to some solution.
+
+- <i> Step 2 </i>
+
+  1. Amongst them, you pick up the most important feature - able to watch the video live.
+     - Being able to watch video live is the primary issue.
+     - your server does not go down.
+     - bandwidth requirements are sufficient.
+  2. Reduce the features to data definitions
+     - user should be able to like/comment on the video.
+     - abstract concept of somebody liking something
+     - means, particular user like particular comment.
+     - I has likeid, userid, timestamp
+     - comment itself as an abstract concept.
+
+- Conclusion:-
+  - Product requirement doc.
+  - <b>taking feature/ abstract-concepts</b> convert them into :-
+  - <b>data definitions</b> this than mapped into the :-
+  - <b>Objects </b> then mapped into the
+  - <b> Database</b>
+  - once you define the data you need to store you need to define :-
+  - <b> EndPoints </b> through which the data can be manipulated/queried.
+  - give me the api through which we can get the data through the server 
+
+## 🚀 Engineering requirements
+
+### 🏹 Fault Tolerance 
+- While building a solution you have some engineering requirements.
+- one of them is - none of your services fail in case of outage
+  - <b><i>outage</i></b> - a period when services not available
+- For example - your some service/comment-service failed in india and you dont want to collapse the system.
+- Earlier, we talked about you have multiple server spread across the world to avoid single point of failure.
+- Also you can have multiple servers in india itself.
+  - Here you might have some sort of data duplication because of which other server quickly able to pick up the responsibility.
+  - Or, you have some sort of partitioning that 50% of user going to this server and 50% going to another server- so just 50% of the user got effected.
+
+
