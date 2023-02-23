@@ -67,6 +67,7 @@
      - comment itself as an abstract concept.
 
 - Conclusion:-
+
   - Product requirement doc.
   - <b>taking feature/ abstract-concepts</b> convert them into :-
   - <b>data definitions</b> this than mapped into the :-
@@ -74,18 +75,46 @@
   - <b> Database</b>
   - once you define the data you need to store you need to define :-
   - <b> EndPoints </b> through which the data can be manipulated/queried.
-  - give me the api through which we can get the data through the server 
+  - give me the api through which we can get the data through the server
+
+- While building a solution you have some engineering requirements.
 
 ## 🚀 Engineering requirements
 
-### 🏹 Fault Tolerance 
-- While building a solution you have some engineering requirements.
-- one of them is - none of your services fail in case of outage
+### 🏹 Fault Tolerance
+
+- none of your services fail in case of outage
   - <b><i>outage</i></b> - a period when services not available
 - For example - your some service/comment-service failed in india and you dont want to collapse the system.
 - Earlier, we talked about you have multiple server spread across the world to avoid single point of failure.
 - Also you can have multiple servers in india itself.
   - Here you might have some sort of data duplication because of which other server quickly able to pick up the responsibility.
   - Or, you have some sort of partitioning that 50% of user going to this server and 50% going to another server- so just 50% of the user got effected.
+
+### 🏹 Extensibility
+
+- Its not just about technical solution you come up with but also how easy you can change if some of the new requirements came up. <i> means is it extensible ?</i>
+- Conclusion :- Build a system that can scale and extends whenever the new requirements meet.
+
+### 🏹 Testing
+
+- The design is then tested by common/edge cases at high level.
+- Can use some tools for e.g. :-
+
+  - capactiy estimation - to test whether the design is feasible and making sense.
+
+- <i> <b>NOTE : you have to test the design before get into the code </b> </i>
+
+## 🚀 Sumarizing the requirements
+
+- Streaming video
+- Processing video
+- Broadcasting - sending video to multiple customer
+- Failproof - not failing.
+- Advertisment - showing advertisment.
+- Reactions - allowing reactions.
+- Disclamers/news flashes
+- Degradation of video quality - in case of low bandwidth.
+- multiple device support.
 
 
