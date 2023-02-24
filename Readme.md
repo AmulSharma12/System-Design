@@ -117,4 +117,33 @@
 - Degradation of video quality - in case of low bandwidth.
 - multiple device support.
 
+## 🚀 Core requirement - Streaming video.
 
+- First we have to capture video from the source and we should have to stored somewhere in server so that we can query it later on.
+- In, Livestreaming system - query it later means miliseconds.
+- means, I may want to stream from the video camera to millions of people.
+- Conclusion :- we are shooting at higher quality 8k sending data into their mobile phones unreasonable.
+  - we should have to store in some database/filesystem
+  - then we should have to stream/query that out to distribute to customers/users.
+  - But, without knowing the customer how i am doing this. So, that they can pay me and relax. Just hit an api and the problems solved
+- API has well defined signatures.
+  - You can tell i need this videoid in particular format.
+  - then we make GET query returning me object of type frames.
+  - These API signature is very much similar to method signatures.
+  - The only difference, that API not queryied by programming language but through network protocol.
+  - Network protocol like - grpc, http, ftp
+    - which define how the electronic message send from one place to another
+    - how the response comes and how the interaction happens this is defined by api.
+- <i><b>API should be tested well as the clients paying for the service not disappointed </b></i>
+- Now, we have system storing data and this data queried using an API
+
+## 🚀 Think about failures now
+
+- What if database crashes
+- What if firewall on internet start blocking the request.
+- What is bug on some part of code /someone maliciously enter the system and change some code
+- <b><i>Solution - we have to use design principles we talked earlier.</i></b>
+- One challege is also of feature request
+  - <i> for example - if you want singer playing in live event to talk to audience
+  - like back and forth with some audience members who they select randomly/based on activity
+  - you have to display those users live and able to broadcast two parties to millions of people out there.
